@@ -66,6 +66,49 @@ $(function () {
 		$(".body .con .con_left .con_left8").css("display", "none");
 		$(".body .con .con_left .con_left9").css("display", "block");
     });
+	$('#btn_perser9_1').click(function () {//学号查找
+		$(".body .con .con_left .con_left9 .user").css("display", "none");
+		$(".body .con .con_left .con_left9 .con_table").css("display", "block");
+		  
+                // 获取表单中的参数  
+                var params = $("#form9_1").serialize();  
+                //alert(params);  
+                // 发送登录的异步请求  
+                $.post("${ctx}/loginAjax.action", params, function(data, status){  
+                    alert(data.tip);  
+                }, "json");  
+              
+        }	
+    );
+	
+	$('#btn_perser9_2').click(function () {//姓名查找
+		$(".body .con .con_left .con_left9 .user").css("display", "none");
+		$(".body .con .con_left .con_left9 .con_table").css("display", "block");
+		  
+                // 获取表单中的参数  
+                var params = $("#form9_2").serialize();  
+                //alert(params);  
+                // 发送登录的异步请求  
+                $.post("${ctx}/loginAjax.action", params, function(data, status){  
+                    alert(data.tip);  
+                }, "json");  
+              
+        }	
+    );
+	$('#btn_perser9_3').click(function () {//考勤号查找
+		$(".body .con .con_left .con_left9 .user").css("display", "none");
+		$(".body .con .con_left .con_left9 .con_table").css("display", "block");
+		  
+                // 获取表单中的参数  
+                var params = $("#form9_3").serialize();  
+                //alert(params);  
+                // 发送登录的异步请求  
+                $.post("${ctx}/loginAjax.action", params, function(data, status){  
+                    alert(data.tip);  
+                }, "json");  
+              
+        }	
+    );
 	
 	$("#imgHoverTreeCode").click(function () {
         changehovertreecheckcode();

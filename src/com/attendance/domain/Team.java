@@ -1,19 +1,19 @@
 package com.attendance.domain;
 
 public class Team {
-    private Integer tid;
+    private int tid;
 
-    private String tname;
+    private String tname=null;
 
-    private Boolean tattendance;
+ 
 
-    private Integer tno;
+    private int tno=0;
 
-    public Integer getTid() {
+    public int getTid() {
         return tid;
     }
 
-    public void setTid(Integer tid) {
+    public void setTid(int tid) {
         this.tid = tid;
     }
 
@@ -25,19 +25,11 @@ public class Team {
         this.tname = tname == null ? null : tname.trim();
     }
 
-    public Boolean getTattendance() {
-        return tattendance;
-    }
-
-    public void setTattendance(Boolean tattendance) {
-        this.tattendance = tattendance;
-    }
-
-    public Integer getTno() {
+    public int getTno() {
         return tno;
     }
 
-    public void setTno(Integer tno) {
+    public void setTno(int tno) {
         this.tno = tno;
     }
 }

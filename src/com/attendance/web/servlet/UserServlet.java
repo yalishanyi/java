@@ -55,9 +55,7 @@ public class UserServlet extends BaseServlet {
 		String username = request.getParameter("uname");
 		String password = request.getParameter("upwd");
 		// password=MD5Utils.md5(password);
-		System.out.println("获取的用户名是："+username);
-		System.out.println("获取的用户密码是："+password);
-		
+
 		// 调用service完成登录
 
 		UserService s = new UserServiceImpl();
@@ -102,6 +100,8 @@ public class UserServlet extends BaseServlet {
 		
 		UserService s=new UserServiceImpl();
 		s.update(user);
+		
+		
 		
 		return "/user/index.jsp";
 	}

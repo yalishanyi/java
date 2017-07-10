@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 
 	public User getByUsernameAndPwd(String username, String password) throws Exception {
 		QueryRunner qRunner=new QueryRunner(DataSourceUtils.getDataSource());
-		String sql="select * from user where uname=? and upwd=? ";
+		String sql="select * from user where uname=? and upwd=? limit 1";
 		User result;
 		result= qRunner.query(sql,new BeanHandler<>(User.class),username,password);
 		System.out.println("获取的用户是："+result.getUname());
