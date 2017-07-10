@@ -14,13 +14,31 @@ package com.attendance.domain;
  */
 public class User  {
     private String uid;
-    private String uname;
-    private String upwd;
-    private String umail;
-    private String uphone;
+    private String uname=null;
+    private String upwd="123456";
+    private String umail=null;
+    private String uphone=null;
     private int teamid;
-    private boolean isleader;
-    private int attrid;
+    private boolean isleader=false;
+    private int attid;
+    public User(String uid, String uname, String upwd, String umail, String uphone,int teamid,boolean isleader,int attrid) {
+		this.uid=uid;
+		this.uname=uname;
+		this.upwd=upwd;
+		this.umail=umail;
+		this.uphone=uphone;
+		this.teamid=teamid;
+		this.isleader=isleader;
+		this.attid=attrid;
+	}
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", uname=" + uname + ", upwd=" + upwd + ", umail=" + umail + ", uphone=" + uphone
+				+ ", teamid=" + teamid + ", isleader=" + isleader + ", attid=" + attid + "]";
+	}
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
 	public String getUid() {
 		return uid;
 	}
@@ -57,17 +75,17 @@ public class User  {
 	public void setTeamid(int teamid) {
 		this.teamid = teamid;
 	}
-	public boolean isIsleader() {
+	public boolean getIsleader() {
 		return isleader;
 	}
 	public void setIsleader(boolean isleader) {
 		this.isleader = isleader;
 	}
-	public int getAttrid() {
-		return attrid;
+	public int getAttid() {
+		return attid;
 	}
-	public void setAttrid(int attrid) {
-		this.attrid = attrid;
+	public void setAttid(int attrid) {
+		this.attid = attrid;
 	}
 
     

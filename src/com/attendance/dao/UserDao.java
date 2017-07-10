@@ -12,6 +12,4 @@ public interface UserDao {
 
 	public User findByName(String username)throws Exception;
 
-
-
 }

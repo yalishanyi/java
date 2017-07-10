@@ -48,11 +48,11 @@
     <div class="con_left">
       
        <div class="con_left1" id="con_left1" style="display: block;">
-       <form id="form1" method="post" action="${pageContext.request.contextPath}/admin?method=test" autocomplete="off">
+       <form id="form1" method="post" action="${pageContext.request.contextPath}/admin?method=addUser" autocomplete="off">
 	<div class="user">
 <div>
 <span class="name"></span>
-	<p>姓名：</p><input type="text"  id="username"  name="uname" placeholder="" value="">
+	<p>姓名：</p><input type="text"  id="username"   name="uname" placeholder="" value="">
 </div>
  
 <div>
@@ -62,7 +62,7 @@
 
 <div>
 <span class="name"></span>
-<p>电话：</p><input type="text" id="phone"  name="uphone" placeholder="" value="">
+<p>电话：</p><input type="text" id="phone" name="uphone" placeholder="" value="">
 </div>
 
 <div>
@@ -72,12 +72,12 @@
 
 <div>
 <span class="name"></span>
-<p>考勤号：</p><input type="text" id="number"  placeholder="" value="">
+<p>考勤号：</p><input type="text" id="number" name="attid" placeholder="" value="">
 </div>
 
 <div>
 <span class="name"></span>
-<p>团队编号：</p><input type="text" id="team"  placeholder="" value="">
+<p>团队编号：</p><input type="text" id="team" name="teamid" placeholder="" value="">
 </div>
 
 </div>
@@ -87,16 +87,16 @@
 	
 	
 	<div class="con_left2" style="display: none;">
-	<form id="form2" method="post" action="${pageContext.request.contextPath}/admin?method=" autocomplete="off">
+	<form id="form2" method="post" action="${pageContext.request.contextPath}/admin?method=addTeam" autocomplete="off">
 	<div class="user">
 <div>
 <span class="name"></span>
-	<p>团队编号：</p><input type="text"  id="teamnumber"   placeholder="" value="">
+	<p>团队编号：</p><input type="text"  id="teamnumber"  name="tid" placeholder="" value="">
 </div>
  
 <div>
 <span class="name"></span>
-<p>团队名：</p><input type="text" id="teamname"   placeholder="" value="">
+<p>团队名：</p><input type="text" id="teamname" name="tname"  placeholder="" value="">
 </div>
 
 
@@ -121,12 +121,12 @@
 		<div class="con_left4" id="con_left4" style="display: none;">
 		<div class="first" style="display: block;">
 		<div class="user">
-		<form id="form4" method="post" action="${pageContext.request.contextPath}/admin?method=" autocomplete="off">
+		<form id="form4" method="post" action="${pageContext.request.contextPath}/admin?method=findTeamAttdByTeamid" autocomplete="off">
 	
 <div>
 <span class="teamid"></span>
 
-	<p>请输入团队编号：</p><input type="text"  id="teamnumber2"   placeholder="" value="">
+	<p>请输入团队编号：</p><input type="text"  id="teamnumber2"  name="teamid"  placeholder="" value="">
 </div>
 	<button class="button1" id="btn_perser4" type="submit">确定</button>		
 </form>
@@ -231,25 +231,35 @@
 		</div>
 		
 		<div class="con_left9" id="con_left9" style="display: none;">
-		<form id="form9" method="post" action="${pageContext.request.contextPath}/admin?method=" autocomplete="off">
+		<form id="form9" method="post" action="${pageContext.request.contextPath}/admin?method=findStuAttdById" autocomplete="off">
 	<div class="user">
 <div>
 <span class="searchid"></span>
-	<p>按学号查找：</p><input type="text"  id="searchid"   placeholder="学号" value="">
+	<p>按学号查找：</p><input type="text"  id="searchid" name="id"  placeholder="学号" value="">
 	<button class="button1" id="btn_perser9_1" type="submit">确定</button>
 </div>
+<div class="con_left9" id="con_left9" style="display: none;">
+	
+<form id="form9_2" method="post" action="${pageContext.request.contextPath}/admin?method=findStuAttdByName" autocomplete="off">
+	<div class="user">
 <div>
 <span class="searchname"></span>
-	<p>按姓名查找：</p><input type="text"  id="searchname"   placeholder="姓名" value="">
+	<p>按姓名查找：</p><input type="text"  id="searchname" name="name"  placeholder="姓名" value="">
 	<button class="button1" id="btn_perser9_2" type="submit">确定</button>
 </div>
+	</div>
+			</form>
+			<form id="form9_3" method="post" action="${pageContext.request.contextPath}/admin?method=findStuAttdByAttid" autocomplete="off">
+	<div class="user">
 <div>
 <span class="searchnumber"></span>
-	<p>按考勤号查找：</p><input type="text"  id="searchnumber"   placeholder="考勤号" value="">
+	<p>按考勤号查找：</p><input type="text"  id="searchnumber" name="attid"  placeholder="考勤号" value="">
 	<button class="button1" id="btn_perser9_3" type="submit">确定</button>
 </div>
-	
+				</div>
+			</form>
 		
+		</div>
 			</div>
 </form>
 	<table class="con_table" style="display: none">
